@@ -22,7 +22,7 @@ public class BloomFilter <T>{
 	/**Hashes the input, marks hi and lo hashes as true*/
 	public void add(T toAdd){
 		table[toAdd.hashCode() & mask] = true;
-		table[(toAdd.hashCode() >>> 16) & mask] = true;
+		table[(toAdd.hashCode() >>> 16)] = true;
 	}
 	
 	/** @return number of true values in table*/
